@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+const arr = ['This', 'is', 'My', 'first', 'piece', 'OF', 'JAVASCRIPT', 'code', 'Which', '', 'is', 'worked'];
+
+function filterCapitalStrings(inputArr) {
+  const novoArr = inputArr.filter(str => /[A-Z]/.test(str));
+  console.log(novoArr);
+  document.writeln(novoArr);
+}
+
+filterCapitalStrings(arr);
+</script>
+</body>
+</html>

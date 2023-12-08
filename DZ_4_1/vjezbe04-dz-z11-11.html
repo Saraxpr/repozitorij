@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+const tempDay = ['2023-11-29', -1, 0, -0.5, 0.5, 0, 1.2, 1.8, 2, 3, 4, 6, 9, 12, 7, 6, 6, 8, 5, 4, 2, 3, 2, 1, 0];
+
+function processTemperatureData(tempDay) {
+  const date = tempDay[0];
+  const temperatures = tempDay.slice(1);
+
+  const minTemperature = Math.min(...temperatures);
+  const maxTemperature = Math.max(...temperatures);
+  const averageTemperature = temperatures.reduce((sum, temp) => sum + temp, 0) / temperatures.length;
+
+  console.log('Date:', date);
+  console.log('Najmanja Temperatura:', minTemperature);
+  console.log('Najveca Temperatura:', maxTemperature);
+  console.log('Prosjecna Temperatura:', averageTemperature);
+}
+
+processTemperatureData(tempDay);
+</script>
+</body>
+</html>
