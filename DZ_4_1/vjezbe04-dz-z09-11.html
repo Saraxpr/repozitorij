@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+function printSavrseniBrojevi(broj) {
+    
+    for (var i = 1; i <= broj; i++) {
+      var sum = 0;
+     
+      for (var j = 1; j <= i / 2; j++) {
+        if (i % j === 0) {
+          sum += j; 
+        }
+      }
+      if (sum === i) {
+        console.log(i);
+        document.writeln(i);
+      }
+    }
+  }
+  
+  printSavrseniBrojevi(100);
+</script>
+  </body>
+</html>
