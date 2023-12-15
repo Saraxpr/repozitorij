@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function zbroj() {
+            var x = document.getElementById("br1").value;
+            var y = document.getElementById("br2").value;
+            var z = parseInt(x)+parseInt(y);
+
+            document.getElementById("rez").value=z;
+        }
+    </script>
+</head>
+<body>
+<form>
+    X = <input id="br1" type="text" size="5" > <br> <br>
+    Y = <input id="br2" type="text" size="5"> <br> <br>
+    <input type="button" value="Zbroji" onclick="zbroj()"> <br>
+    <hr width="150px" align="left" >
+    REZULTAT = <input id="rez" type="text" size="5">
+</form>
+
+</body>
+</html>

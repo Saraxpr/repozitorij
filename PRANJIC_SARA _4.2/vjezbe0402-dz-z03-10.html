@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function checkRating() {
+            var rating = document.getElementById("rating").value;
+            var poruka;
+
+            switch (rating) {
+                case "1":
+                    poruka = "Nedovoljan";
+                    break;
+                case "2":
+                    poruka = "Dovoljan";
+                    break;
+                case "3":
+                    poruka = "Dobar";
+                    break;
+                case "4":
+                    poruka = "Vrlo dobar";
+                    break;
+                case "5":
+                    poruka = "Odlican";
+                    break;
+                default:
+                    poruka = "Pogreska";
+                    break;
+            }
+
+            alert("Ocjena: " + poruka);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="rating">Ocjena (1-5):</label>
+        <input type="text" id="rating" name="rating">
+        <button type="button" onclick="checkRating()">Unos</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function displayGrade() {
+            var grade = document.getElementById("grade").value;
+
+            var gradeDescription;
+
+            switch (grade) {
+                case "1":
+                    gradeDescription = "Nedovoljan";
+                    break;
+                case "2":
+                    gradeDescription = "Dovoljan";
+                    break;
+                case "3":
+                    gradeDescription = "Dobar";
+                    break;
+                case "4":
+                    gradeDescription = "Vrlo dobar";
+                    break;
+                case "5":
+                    gradeDescription = "Odlican";
+                    break;
+                default:
+                    gradeDescription = "Pogreska";
+                    break;
+            }
+
+            document.getElementById("gradeDescription").innerText = gradeDescription;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="grade">Upisi ocjenu (1-5):</label>
+        <input type="text" id="grade" name="grade">
+        <br>
+        <button type="button" onclick="displayGrade()">Unos</button>
+    </form>
+
+    <p id="gradeDescription">Vasa ocjena.</p>
+</body>
+</html>

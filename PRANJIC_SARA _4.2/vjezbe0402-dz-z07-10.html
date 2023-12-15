@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function calculateAge() {
+            var birthDate = document.getElementById("date").value;
+            var birthYear = document.getElementById("year").value;
+
+            var currentDate = new Date();
+
+            var birthMonth = parseInt(birthDate.split("-")[1]);
+            var birthDay = parseInt(birthDate.split("-")[2]);
+
+            var age = currentDate.getFullYear() - birthYear;
+            if (currentDate.getMonth() + 1 < birthMonth || (currentDate.getMonth() + 1 === birthMonth && currentDate.getDate() < birthDay)) {
+                age--;
+            }
+
+            alert("Imas godina: " + age);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="date">Datum rodjenja:</label>
+        <input type="date" id="date" required><br><br>
+        <label for="year">Godina rodjenja:</label>
+        <input type="number" id="year" required><br><br>
+        <input type="button" value="Izracunaj" onclick="calculateAge()">
+    </form>
+</body>
+</html>

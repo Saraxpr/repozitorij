@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeBtn">Promjeni pozadinu</button>
+    <p id="currentColor"></p>
+
+    <script>
+
+        function getRandomColor() {
+            var slova = '0123456789ABCDEF';
+            var boja = '#';
+            for (var i = 0; i < 6; i++) {
+                boja += slova[Math.floor(Math.random() * 16)];
+            }
+            return boja;
+        }
+
+        function changeBackground() {
+            var color = getRandomColor();
+            document.body.style.backgroundColor = color;
+            document.getElementById("currentColor").textContent = "Trenutna boja: " + color;
+        }
+
+        
+        document.getElementById("changeBtn").addEventListener("click", changeBackground);
+    </script>
+</body>
+</html>

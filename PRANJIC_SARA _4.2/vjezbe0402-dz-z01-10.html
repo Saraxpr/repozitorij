@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function calculateAritmetickaSredina(numbers) {
+            var sum = 0;
+            for (var i = 0; i < numbers.length; i++) {
+                sum += parseInt(numbers[i]);
+            }
+            return sum / numbers.length;
+        }
+
+        function calculateGeometrijskaSredina(numbers) {
+            var product = 1;
+            for (var i = 0; i < numbers.length; i++) {
+                product *= parseInt(numbers[i]);
+            }
+            return Math.pow(product, 1 / numbers.length);
+        }
+
+        var numberString = prompt("Unesite brojeve odvojene zarezom (npr. 1, 4, 16):");
+        var numbers = numberString.split(",");
+
+        var aritmeticSredina = calculateAritmetickaSredina(numbers);
+        var geometrijSredina = calculateGeometrijskaSredina(numbers);
+
+        document.write("<p>Brojevi: " + numberString + "</p>");
+        document.write("<p>Aritmeticka sredina: " + aritmeticSredina + "</p>");
+        document.write("<p>Geometrijska sredina: " + geometrijSredina + "</p>");
+    </script>
+</body>
+</html>
